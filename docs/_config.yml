@@ -1,9 +1,6 @@
 plugins:
 - jekyll-github-metadata
 
-ignore_theme_config: true
-theme: null
-
 instances:
 - fedi.absturztau.be
 - kartoffel.cafe
