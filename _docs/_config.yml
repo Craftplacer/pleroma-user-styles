@@ -1,0 +1,10 @@
+ignore_theme_config: true
+theme: null
+plugins: []
+repo: https://github.com/Craftplacer/pleroma-user-styles
+instances:
+- fedi.absturztau.be
+- kartoffel.cafe
+- letsalllovela.in
+- neckbeard.xyz
+- girlslove.pink

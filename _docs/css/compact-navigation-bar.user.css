@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Compact navigation bar"
+version: "1.1.0"
+description: "Compacts the vertical navbar into a horizontal icon-ic one."
+---
+
+:root {
+    --cnb-size: 20px;
+    --cnb-padding: 0px;
+    --cnb-height: 40px;
+    --cnb-rounding: 0;
+}
+
+.nav-panel > .panel {
+    height: var(--cnb-height);
+}
+
+.nav-panel ul {
+    display: flex;
+    height: 100%;
+    padding: var(--cnb-padding);
+}
+
+.nav-panel li {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    border-bottom: none;
+}
+    
+.nav-panel li a {
+    border-radius: var(--cnb-rounding) !important;
+}
+
+.nav-panel a {
+    font-size: 0;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.nav-panel .button-icon {
+    margin: auto;
+    font-size: var(--cnb-size);
+    color: var(--link,#d8a070);
+}
+
+.nav-panel > .panel > ul > li:hover > a:not(.router-link-active) > .button-icon {
+    color: var(--selectedMenuText,#b9b9ba);
+}
+
+.nav-panel > .panel > ul > li > .router-link-active > .button-icon {
+    color: var(--selectedMenuLightText);
+}
+
+.nav-panel .badge {
+    position: absolute;
+    right: 0;
+    font-size: initial;
+}
+.nav-panel .follow-request-count {
+    margin: 0;
+}
+.nav-panel .follow-request-count {
+    background-color: red;
+    background-color: var(--badgeNotification,red);
+    color: #fff;
+    color: var(--badgeNotificationText,#fff);
+    
+    padding: 0;
+    box-shadow: black 0 1px 5px;
+}
