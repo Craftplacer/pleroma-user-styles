@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Better autocompletion highlight"
+version: "1.0.0"
+description: "Gives highlighted autocompletion items a more noticable background."
+---
+
+:root {
+    --ac-border-width: 2px;
+    --ac-border-width2: calc(var(--ac-border-width) * 2);
+    --ac-padding-x: 6px;
+    --ac-padding-y: 3px;
+}
+
+.autocomplete-item {
+    padding: var(--ac-padding-y) var(--ac-padding-x) !important;
+}
+
+.autocomplete-item.highlighted {
+    background: var(--popoverFaintLink) !important;
+    border: var(--ac-border-width) solid var(--link);
+    border-radius: 4px;
+    padding-left:   calc(var(--ac-padding-x) - var(--ac-border-width)) !important;
+    padding-right:  calc(var(--ac-padding-x) - var(--ac-border-width)) !important;
+    padding-top:    calc(var(--ac-padding-y) - var(--ac-border-width)) !important;
+    padding-bottom: calc(var(--ac-padding-y) - var(--ac-border-width)) !important;
+}
