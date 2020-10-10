@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Short user info"
+version: "1.1.0"
+description: "Makes the user info header on the post form smaller"
+---
+
+/* hide gradient and center background*/
+.user-panel .background-image {
+    mask: unset; -webkit-mask: unset;
+    background-position: center;
+}
+
+/* smaller avatar */
+.user-panel .user-info .Avatar { width: 24px; height: 24px; }
+
+/* fix spacing and make text bold*/
+.user-panel .user-summary { margin-left: 1em; font-weight: bold; }
+
+/* "fix" padding around header */
+.user-panel .user-info .container { padding-top: 6px; padding-bottom: 0; }
+
+/* hide username */
+.user-panel .bottom-line { display: none; }
+
+/* remove spacing around visibility notice */
+.form-group .visibility-notice { margin: 0; }
