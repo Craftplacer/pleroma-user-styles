@@ -1,25 +1,24 @@
 ---
 layout: default
 title: "Compact navigation bar"
-version: "1.1.0"
+version: "1.1.1"
 description: "Compacts the vertical navbar into a horizontal icon-ic one."
+preprocessor: stylus
+variables:
+- '@var text iconSize "Icon size" 20px'
+- '@var text height "Height" 40px'
+- '@var text rounding "Rounding" 0'
+- '@var text padding "Padding" 0'
 ---
 
-:root {
-    --cnb-size: 20px;
-    --cnb-padding: 0px;
-    --cnb-height: 40px;
-    --cnb-rounding: 0;
-}
-
 .nav-panel > .panel {
-    height: var(--cnb-height);
+    height: height;
 }
 
 .nav-panel ul {
     display: flex;
     height: 100%;
-    padding: var(--cnb-padding);
+    padding: padding;
 }
 
 .nav-panel li {
@@ -29,7 +28,7 @@ description: "Compacts the vertical navbar into a horizontal icon-ic one."
 }
     
 .nav-panel li a {
-    border-radius: var(--cnb-rounding) !important;
+    border-radius: rounding !important;
 }
 
 .nav-panel a {
@@ -41,7 +40,7 @@ description: "Compacts the vertical navbar into a horizontal icon-ic one."
 
 .nav-panel .button-icon {
     margin: auto;
-    font-size: var(--cnb-size);
+    font-size: iconSize;
     color: var(--link,#d8a070);
 }
 

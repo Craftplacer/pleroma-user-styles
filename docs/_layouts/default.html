@@ -7,6 +7,8 @@
 @homepageURL {{site.github.repository_url}}
 @supportURL  {{site.github.issues_url}}
 @updateURL   {{site.url}}{{page.url | relative_url}}
+@preprocessor {{page.preprocessor | default "default" }}
+{% for variable in page.variables %}{{variable}}{% endfor %}
 ==/UserStyle== */
 {% assign count = 0 %}
 {% capture domains %}{% for instance in site.instances %}{% if count != 0 %}, {% endif %}domain("{{instance}}"){% assign count = count | plus: 1 %}{% endfor %}{% endcapture %}
