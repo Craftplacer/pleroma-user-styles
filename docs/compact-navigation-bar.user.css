@@ -10,62 +10,74 @@ variables:
 - '@var text rounding "Rounding" 0'
 - '@var text padding "Padding" 0'
 ---
+// (craft) new pleroma-fe uses .NavPanel (idk why), old one uses .nav-panel
+.nav-panel, .NavPanel {
+	.panel {
+	    height: height;
+	    
+	    ul > li:hover > a:not(.router-link-active) > .button-icon {
+		color: var(--selectedMenuText,#b9b9ba);
+	    }
+	    
+	    ul > li > .router-link-active > .button-icon {
+		color: var(--selectedMenuLightText);
+	    }
+	}
 
-.nav-panel > .panel {
-    height: height;
-}
+	ul { 
+	    display: flex;
+	    height: 100%;
+	    padding: padding;
+	}
+	li {
+	    width: -moz-available;
+	    width: -webkit-fill-available;
+	    border-bottom: none;
 
-.nav-panel ul {
-    display: flex;
-    height: 100%;
-    padding: padding;
-}
+	    a {
+		border-radius: rounding !important;
+	    }
+	}
+	a {
+	    font-size: 0;
+	    height: 100%;
+	    display: flex;
+	    position: relative;
+	}
 
-.nav-panel li {
-    width: -moz-available;
-    width: -webkit-fill-available;
-    border-bottom: none;
-}
-    
-.nav-panel li a {
-    border-radius: rounding !important;
-}
+	.button-icon, svg.svg-inline--fa {
+	    margin: auto;
+	    font-size: iconSize;
+	    color: var(--link,#d8a070);
+	}
 
-.nav-panel a {
-    font-size: 0;
-    height: 100%;
-    display: flex;
-    position: relative;
-}
+	.badge {
+	    position: absolute;
+	    right: 0;
+	    
+	    background-color: red;
+	    background-color: var(--badgeNotification,red);
+	    color: #fff;
+	    color: var(--badgeNotificationText,#fff);
 
-.nav-panel .button-icon {
-    margin: auto;
-    font-size: iconSize;
-    color: var(--link,#d8a070);
-}
+	    // remove layout
+	    padding: 0;
+	    margin: 0;
+	    
+	    
+	    box-shadow: black 0 1px 5px;
+	    
+	    display: inline-block;
 
-.nav-panel > .panel > ul > li:hover > a:not(.router-link-active) > .button-icon {
-    color: var(--selectedMenuText,#b9b9ba);
-}
-
-.nav-panel > .panel > ul > li > .router-link-active > .button-icon {
-    color: var(--selectedMenuLightText);
-}
-
-.nav-panel .badge {
-    position: absolute;
-    right: 0;
-    font-size: initial;
-}
-.nav-panel .follow-request-count {
-    margin: 0;
-}
-.nav-panel .follow-request-count {
-    background-color: red;
-    background-color: var(--badgeNotification,red);
-    color: #fff;
-    color: var(--badgeNotificationText,#fff);
-    
-    padding: 0;
-    box-shadow: black 0 1px 5px;
+	    border-radius: 99px;
+	    min-width: 22px;
+	    line-height: 22px;
+	    min-height: 22px;
+	    max-height: 22px;
+	    
+	    font-size: 14px;
+	    font-weight: normal;
+	    font-style: normal;
+	    font-family: inherit;
+	}
 }
