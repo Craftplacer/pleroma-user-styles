@@ -21,4 +21,6 @@ This repository contains all user styles I've written for the Pleroma-FE.
 
 ### [Better autocompletion highlight](https://craftplacer.github.io/pleroma-user-styles/better-autocompletion-highlight.user.css)
 
-No preview yet.
+| Before | After |
+| ------ | ----- |
+| ![](images/better-autocompletion-highlight/before.png) | ![](images/better-autocompletion-highlight/after.png) |
